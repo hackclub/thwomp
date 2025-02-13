@@ -1,6 +1,7 @@
 # 🗿 Thwomp
 
-A sentient stone block that blocks you from accessing web servers.
+A sentient stone block that blocks web traffic from accessing your servers
+during maintenance period.
 
 Or in other words, a rudimentary hand-rolled maintenance mode.
 
