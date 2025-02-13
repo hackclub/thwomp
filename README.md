@@ -12,11 +12,12 @@ Or in other words, a rudimentary hand-rolled maintenance mode.
 This silly stone block has quite a few assumptions:
 - You're using some sort of load balancer or proxy
   - For HCB, we have a Hetzner Load Balancer in front of our servers
-- You're able to configure the target of the LB/proxy
-  - For HCB, we can easily add/remove server ips as targets of the LB
-- You can deploy this Dockerfile to a server
+- You're able to deploy Thwomp on all the same servers (that are targets of the
+  load balancer)
 - SSL is terminated at the LB/proxy (e.g. this Nginx server doesn't need to
   handle SSL)
+- You're able to access the Hetzner Cloud dashboard to switch the target port
+  of the service in the load balancer
 
 ### How to use it
 
