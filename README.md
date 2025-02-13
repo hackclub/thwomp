@@ -1,7 +1,9 @@
-# 🗿 Thwomp
+<img align="left" width="50" height="50" src="https://static.wikia.nocookie.net/nintendo/images/7/79/ThwompMKL.png/revision/latest?cb=20220912195412&path-prefix=en">
+
+# Thwomp
 
 A sentient stone block that blocks web traffic from accessing your servers
-during maintenance period.
+during maintenance periods.
 
 Or in other words, a rudimentary hand-rolled maintenance mode.
 
