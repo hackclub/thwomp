@@ -18,10 +18,18 @@ This silly stone block has quite a few assumptions:
 - SSL is terminated at the LB/proxy (e.g. this Nginx server doesn't need to
   handle SSL)
 
-### How to use it:
+### How to use it
 
 1. Deploy this
-   For HCB, we use Coolify. We give it a dedicated server and port map `80:80`
-2. Remove all existing servers from load balancer
-3. Add this server to load balancer. This should be the only server.
-4. Your users get thwomp'ed with a maintenance mode page!
+
+   For HCB, we use Coolify. We have it deployed on all the same servers as HCB
+   and port mapped to `81:80` (81 on host, 80 in container).
+
+   Here's why:
+   - Instead of adding/removing servers from the LB, we can simply switch the
+   target port that the LB sends traffic to.
+   - By switching the target port to 81, it means that all target servers in the
+     LB must respond on port 81, and thus Thwomp must be running on all servers.
+2. Go to the load balance and update the service to target port 81 instead of
+   80.
+3. Your users get thwomp'ed with a maintenance mode page!
